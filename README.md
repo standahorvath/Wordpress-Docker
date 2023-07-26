@@ -3,7 +3,7 @@ Wordpress CMS in docker container for simple and easy development
 
 This repository is to complement the article on how to run wordpress on docker.
 
-**Article can be found here:** [standa.tonakodi.cz/knowledge/local-wordpress-development-harness-the-power-of-docker-containers](https://standa.tonakodi.cz/knowledge/local-wordpress-development-harness-the-power-of-docker-containers)
+**Article can be found here:** [standa.tonakodi.cz/knowledge/local-wordpress-development-harness-the-power-of-docker-containers](https://standa.tonakodi.cz/knowledge/local-wordpress-development-harness-the-power-of-docker-containers){rel="follow"}
 
 ## Requirements
 - Docker
