@@ -1,0 +1,35 @@
+version: '3'
+services:
+  php:
+    container_name: WP-App
+    build:
+      dockerfile: docker/dev/Dockerfile
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - 80:80
+    depends_on:
+      - database
+    links:
+      - database
+
+  database:
+    container_name: WP-Database
+    platform: linux/x86_64
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    env_file:
+      - docker/dev/.env
+
+  phpmyadmin:
+    container_name: WP-PhpMyAdmin
+    depends_on:
+      - database
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - '8282:80'
+    env_file:
+      - docker/dev/.env
+    environment:
+      UPLOAD_LIMIT: 300M
